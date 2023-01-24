@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	int a=0,b=1,c,n;
+	printf("Enter a number : ");
+	scanf("%d",&n);
+	printf("Fibonaaci series :-\n");
+	printf("%d\n",a);
+	printf("%d\n",b);
+	for(int i=2;i<n;i++)
+	{
+		int temp;
+		c=a+b;
+		printf("%d\n",c);
+		a=b;
+		b=c;
+	}
+		
+}
