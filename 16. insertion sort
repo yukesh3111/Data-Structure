@@ -1,0 +1,32 @@
+include <stdio.h>
+void insFunc(int a[], int num) {
+    int i, j, temp;
+    for(i = 1; i <= num - 1; i++)
+    {
+        for(j = i; j > 0 && a[j - 1] > a[j]; j--)
+        {
+            temp = a[j];
+            a[j] = a[j - 1];
+            a[j - 1] = temp;
+        }
+    }
+}
+int main()
+{
+    int a[100], num, i;
+    
+    printf("\n Please Enter the total No. of Elements  :  ");
+    scanf("%d", &num);
+    
+    printf("\n Please Enter the Array Elements  :  ");
+    for(i = 0; i < num; i++)
+        scanf("%d", &a[i]);
+
+    insFunc(a, num);
+    printf("\n Output : ");
+    for(i = 0; i < num; i++)  {
+        printf(" %d \t", a[i]);
+    }
+    printf("\n");
+    return 0;
+}
